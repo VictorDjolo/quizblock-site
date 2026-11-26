@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Add your own flashcard decks · QuizBlock</title>
-  <meta name="description" content="Import your own questions into QuizBlock from a CSV or TSV file or an Anki export, and see how they mix into quizzes and how answers are checked.">
+  <meta name="description" content="Import your own questions into QuizBlock from a CSV or TSV file or an Anki deck, and see how they mix into quizzes and how answers are checked.">
   <link rel="canonical" href="https://victordjolo.github.io/quizblock-site/guides/add-your-own-decks/">
   <meta name="theme-color" content="#12395e">
   <link rel="icon" href="../../img/favicon-32.png">
@@ -14,11 +14,11 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="QuizBlock">
   <meta property="og:title" content="Add your own flashcard decks · QuizBlock">
-  <meta property="og:description" content="Import your own questions into QuizBlock from a CSV or TSV file or an Anki export, and see how they mix into quizzes and how answers are checked.">
+  <meta property="og:description" content="Import your own questions into QuizBlock from a CSV or TSV file or an Anki deck, and see how they mix into quizzes and how answers are checked.">
   <meta property="og:url" content="https://victordjolo.github.io/quizblock-site/guides/add-your-own-decks/">
   <meta property="og:image" content="https://victordjolo.github.io/quizblock-site/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Add your own flashcard decks","description":"Import your own questions into QuizBlock from a CSV or TSV file or an Anki export, and see how they mix into quizzes and how answers are checked.","datePublished":"2026-11-25","dateModified":"2026-11-25","author":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/"},"publisher":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/","logo":{"@type":"ImageObject","url":"https://victordjolo.github.io/quizblock-site/img/icon-128.png"}},"image":"https://victordjolo.github.io/quizblock-site/img/og.png","mainEntityOfPage":"https://victordjolo.github.io/quizblock-site/guides/add-your-own-decks/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Add your own flashcard decks","description":"Import your own questions into QuizBlock from a CSV or TSV file or an Anki deck, and see how they mix into quizzes and how answers are checked.","datePublished":"2026-11-26","dateModified":"2026-11-26","author":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/"},"publisher":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/","logo":{"@type":"ImageObject","url":"https://victordjolo.github.io/quizblock-site/img/icon-128.png"}},"image":"https://victordjolo.github.io/quizblock-site/img/og.png","mainEntityOfPage":"https://victordjolo.github.io/quizblock-site/guides/add-your-own-decks/"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"QuizBlock","item":"https://victordjolo.github.io/quizblock-site/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://victordjolo.github.io/quizblock-site/guides/"},{"@type":"ListItem","position":3,"name":"Add your own flashcard decks","item":"https://victordjolo.github.io/quizblock-site/guides/add-your-own-decks/"}]}</script>
 </head>
 <body class="page">
@@ -51,8 +51,8 @@
       <header class="article-head">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="../../guides/">Guides</a></nav>
         <h1>Add your own flashcard decks</h1>
-        <p class="article-lede">Turn a CSV, TSV or Anki export into questions QuizBlock asks in its quizzes, next to its own subjects.</p>
-        <p class="article-meta"><span>Updated <time datetime="2026-11-25">25 November 2026</time></span><span>4 min read</span></p>
+        <p class="article-lede">Turn a CSV, TSV or Anki deck into questions QuizBlock asks in its quizzes, next to its own subjects or on their own.</p>
+        <p class="article-meta"><span>Updated <time datetime="2026-11-26">26 November 2026</time></span><span>5 min read</span></p>
       </header>
       <div class="article-grid">
         <aside class="toc" aria-label="On this page">
@@ -65,6 +65,7 @@
           <ol><li><a href="#the-file-format">The file format</a></li><li><a href="#exporting-notes-from-anki">Exporting notes from Anki</a></li><li><a href="#import-the-deck">Import the deck</a></li><li><a href="#how-decks-mix-into-quizzes">How decks mix into quizzes</a></li><li><a href="#how-answers-are-checked">How answers are checked</a></li><li><a href="#making-good-cards">Making good cards</a></li><li><a href="#remove-a-deck">Remove a deck</a></li><li><a href="#where-your-decks-are-kept">Where your decks are kept</a></li></ol>
         </details>
 <p>QuizBlock can ask your own questions alongside its built-in subjects: vocabulary, exam facts, anything you want to drill. Here’s how to write the file, import it and make cards that work well at the gate.</p>
+<p>Studying with Anki? Import your deck package (<code>.apkg</code>) directly, pictures and cloze cards included: see <a href="../../guides/anki-decks/">import Anki decks</a>.</p>
 
 <h2 id="the-file-format">The file format</h2>
 <p>A deck is a plain text file (<code>.csv</code>, <code>.tsv</code> or <code>.txt</code>) with one question per line. The columns go in this order:</p>
@@ -81,9 +82,10 @@
 <ul>
   <li><strong>Separators:</strong> commas, tabs or semicolons all work. Use the same one throughout the file.</li>
   <li><strong>Quotes:</strong> in a comma-separated file, put a field that contains a comma in double quotes. To write a double quote inside it, type two.</li>
-  <li><strong>One line per card:</strong> a question can’t run over several lines.</li>
+  <li><strong>One line per card:</strong> to run a question or answer over several lines, put it in double quotes.</li>
   <li><strong>Header row:</strong> a first line whose columns say “question” (or “front”) and “answer” (or “back”) is skipped. So are blank lines and lines starting with <code>#</code>.</li>
-  <li><strong>Plain text only:</strong> HTML tags are removed, so formatting and pictures don’t come through. Text over 300 characters is cut short.</li>
+  <li><strong>Formatting:</strong> HTML for bold, italics, sub- and superscript and lists is kept. Pictures need an Anki deck package: a card whose question needs a picture is left out.</li>
+  <li><strong>Length:</strong> questions over 1,000 characters are cut short. Answers over 160 characters are left out, and long ones need wrong answers to go with them: see how answers are checked, below.</li>
   <li><strong>Repeats:</strong> if the same question appears twice, the second is left out.</li>
 </ul>
 <p>Here’s a small deck you can copy:</p>
@@ -91,30 +93,33 @@
 What is the capital of Australia?,Canberra,Sydney,Melbourne,Perth,It was chosen as a compromise between Sydney and Melbourne.
 "Translate into English: la mañana, la tarde",morning and afternoon
 Chemical symbol for gold,Au,From the Latin word aurum.</code></pre>
-<p>If you write it in a spreadsheet, save or download it as CSV. In Excel, pick <strong>CSV UTF-8</strong> so accents come through. A deck can hold up to 1,000 questions, the file must be under 2 MB, and you can have up to 10 decks.</p>
+<p>If you write it in a spreadsheet, save or download it as CSV. In Excel, pick <strong>CSV UTF-8</strong> so accents come through. A deck can hold up to 50,000 cards and the file can be up to 50 MB. You can have up to 10 decks, with 100,000 cards in all.</p>
 
 <h2 id="exporting-notes-from-anki">Exporting notes from Anki</h2>
-<p>Anki’s plain-text export works as it is. In Anki, choose <strong>File</strong>, then <strong>Export</strong>, and pick <strong>Notes in Plain Text</strong> and the deck you want.</p>
+<p>An Anki deck package (<code>.apkg</code>) is the best choice: it brings pictures and the cards you’ve studied. See <a href="../../guides/anki-decks/">import Anki decks</a>.</p>
+<p>Anki’s plain-text export works too, without pictures. In Anki, choose <strong>File</strong>, then <strong>Export</strong>, and pick <strong>Notes in Plain Text</strong> and the deck you want.</p>
 <ul>
-  <li>Leave out tags, and the deck name, note type and unique identifier if your version of Anki offers them: QuizBlock reads the first column as the question and the second as the answer.</li>
-  <li>Unticking <strong>Include HTML and media references</strong> gives cleaner text.</li>
-  <li>Use notes with the question on the front and the answer on the back, like Anki’s Basic type. Each note gives one question. Cloze notes don’t work in this version.</li>
+  <li>Leave the other options as they are: QuizBlock reads the lines Anki writes at the top of the file, so it knows which columns hold the deck name, note type, tags and unique identifier.</li>
+  <li>Cloze notes become fill-in-the-blank cards, and a “reversed card” note gives a card each way.</li>
+  <li>With the unique identifier included, importing a newer export keeps your progress, and so does importing the same notes later as a deck package.</li>
+  <li>Anki’s “Cards in Plain Text” export can’t be used: its answers can’t be checked.</li>
 </ul>
 
 <h2 id="import-the-deck">Import the deck</h2>
 <ol class="steps">
   <li>Click QuizBlock in the toolbar, then <strong>Open dashboard</strong>, and go to <strong>Settings</strong>.</li>
-  <li>In <strong>What you want to learn</strong>, find <strong>Your own decks</strong> and click <strong>Import a deck</strong>.</li>
-  <li>Choose your file. QuizBlock shows how many questions it found, the first three with their answers, and how many lines it left out because they had no question or answer, or repeated one.</li>
-  <li>Check the <strong>Name</strong> (up to 40 characters). It starts as the file name.</li>
+  <li>In <strong>What you want to learn</strong>, find <strong>Your own decks</strong> and click <strong>Import a deck</strong>, or drop the file onto that panel.</li>
+  <li>Choose your file. QuizBlock reads it on this computer and shows how many cards will be added, what’s left out and why (no question or answer, a repeat, an answer too long to check), and some cards as they’ll be asked.</li>
+  <li>Check the <strong>Name</strong> (up to 40 characters). It starts as the file name, or the deck’s name in an Anki export.</li>
   <li>Click <strong>Add deck</strong>. The deck appears in the list, switched on.</li>
 </ol>
+<p>To change a deck, edit the file and import it again under the same name: the button says <strong>Update deck</strong>, and cards whose question hasn’t changed keep their progress.</p>
 
 <h2 id="how-decks-mix-into-quizzes">How decks mix into quizzes</h2>
-<p>A deck works like one more subject. Click its name in <strong>Your own decks</strong> to switch it off or back on; that’s instant.</p>
+<p>A deck works like one more subject. Click its name in <strong>Your own decks</strong> to switch it off or back on; that’s instant. Under your decks, <strong>Quizzes ask</strong> offers two ways to use them:</p>
 <ul>
-  <li><strong>It needs a built-in subject too.</strong> Decks are used only alongside at least one built-in subject. With none chosen, Settings says so and your cards aren’t asked.</li>
-  <li><strong>At most half a quiz.</strong> Your cards make up no more than half of a quiz’s questions. Map challenges carry on as before.</li>
+  <li><strong>Subjects and decks:</strong> your cards make up no more than half of a quiz’s questions, alongside at least one built-in subject. Map challenges carry on as before.</li>
+  <li><strong>Only my cards:</strong> every challenge is a quiz from your cards, with no maps. It needs at least 50 cards in the decks switched on, and applies at once. See <a href="../../guides/anki-decks/">import Anki decks</a> for how it picks cards.</li>
   <li><strong>Spaced repetition applies.</strong> Cards you miss come back sooner; ones you know, less and less often. See <a href="../../guides/how-challenges-work/">how challenges work</a>.</li>
   <li><strong>Never to switch a site off.</strong> That quiz always uses QuizBlock’s own questions.</li>
 </ul>
@@ -123,7 +128,8 @@ Chemical symbol for gold,Au,From the Latin word aurum.</code></pre>
 <p>Every card is checked: you either pick from four options or type the answer.</p>
 <ul>
   <li>A card with its own three wrong answers is always multiple choice.</li>
-  <li>A card without them is sometimes multiple choice, using three other answers from the same deck as wrong options (so the deck needs at least three other answers), and otherwise typed.</li>
+  <li>A card without them is sometimes multiple choice, using three other answers from the same deck as wrong options, and otherwise typed. The wrong options are answers of the same kind and length (a number for a number), so the deck needs at least three like that.</li>
+  <li>Answers of 41 to 160 characters are always multiple choice, so they need their own three wrong answers or three like them in the deck; otherwise they’re left out.</li>
   <li>Typed answers ignore capitals, accents, full stops, commas, apostrophes, hyphens and a leading “the” (or “le”, “la”, “der”, “il” and the like).</li>
   <li>Small slips count as right: one wrong, missing or extra character in answers of five to eight characters, two in longer ones. QuizBlock shows the right spelling. Answers of four characters or fewer must be exact.</li>
   <li><strong>I don’t know</strong> counts as a miss.</li>

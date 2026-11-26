@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import Anki decks with pictures and cloze cards · QuizBlock</title>
+  <meta name="description" content="Bring Anki deck packages into QuizBlock with their pictures, cloze cards and study history, and use Only my cards to make every challenge your own deck.">
+  <link rel="canonical" href="https://victordjolo.github.io/quizblock-site/guides/anki-decks/">
+  <meta name="theme-color" content="#12395e">
+  <link rel="icon" href="../../img/favicon-32.png">
+  <link rel="preload" href="../../fonts/young-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../style.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="QuizBlock">
+  <meta property="og:title" content="Import Anki decks with pictures and cloze cards · QuizBlock">
+  <meta property="og:description" content="Bring Anki deck packages into QuizBlock with their pictures, cloze cards and study history, and use Only my cards to make every challenge your own deck.">
+  <meta property="og:url" content="https://victordjolo.github.io/quizblock-site/guides/anki-decks/">
+  <meta property="og:image" content="https://victordjolo.github.io/quizblock-site/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Import Anki decks with pictures and cloze cards","description":"Bring Anki deck packages into QuizBlock with their pictures, cloze cards and study history, and use Only my cards to make every challenge your own deck.","datePublished":"2026-11-26","dateModified":"2026-11-26","author":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/"},"publisher":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/","logo":{"@type":"ImageObject","url":"https://victordjolo.github.io/quizblock-site/img/icon-128.png"}},"image":"https://victordjolo.github.io/quizblock-site/img/og.png","mainEntityOfPage":"https://victordjolo.github.io/quizblock-site/guides/anki-decks/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"QuizBlock","item":"https://victordjolo.github.io/quizblock-site/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://victordjolo.github.io/quizblock-site/guides/"},{"@type":"ListItem","position":3,"name":"Import Anki decks with pictures and cloze cards","item":"https://victordjolo.github.io/quizblock-site/guides/anki-decks/"}]}</script>
+</head>
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top top--solid on-light">
+    <div class="top__inner">
+      <a class="brand" href="../../" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="top__nav" aria-label="Main">
+        <a href="../../#how">How it works</a>
+        <a href="../../guides/" aria-current="page">Guides</a>
+        <a href="../../blog/">Blog</a>
+      </nav>
+      <details class="menu">
+        <summary><span class="menu__icon" aria-hidden="true"><i></i><i></i></span><span class="sr">Menu</span></summary>
+        <nav class="menu__panel" aria-label="Menu">
+          <a href="../../#how">How it works</a>
+          <a href="../../guides/" aria-current="page">Guides</a>
+          <a href="../../blog/">Blog</a>
+          <a href="../../privacy.html">Privacy</a>
+        </nav>
+      </details>
+      <a class="btn btn--small" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=header&amp;utm_campaign=page"><span>Add to Chrome</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <header class="article-head">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="../../guides/">Guides</a></nav>
+        <h1>Import Anki decks with pictures and cloze cards</h1>
+        <p class="article-lede">Import .apkg files with pictures and cloze cards, choose which cards come in, and let QuizBlock quiz you on your own cards alone.</p>
+        <p class="article-meta"><span>Updated <time datetime="2026-11-26">26 November 2026</time></span><span>4 min read</span></p>
+      </header>
+      <div class="article-grid">
+        <aside class="toc" aria-label="On this page">
+          <p class="toc__title">On this page</p>
+          <ol><li><a href="#what-you-can-import">What you can import</a></li><li><a href="#export-from-anki">Export from Anki</a></li><li><a href="#import-it">Import it</a></li><li><a href="#how-cards-look">How cards look</a></li><li><a href="#cloze-cards">Cloze cards</a></li><li><a href="#how-answers-are-checked">How answers are checked</a></li><li><a href="#only-my-cards">Only my cards</a></li><li><a href="#updating-and-removing-a-deck">Updating and removing a deck</a></li><li><a href="#limits">Limits</a></li><li><a href="#privacy-and-backups">Privacy and backups</a></li></ol>
+        </aside>
+        <article class="prose">
+        <details class="toc-mobile">
+          <summary>On this page</summary>
+          <ol><li><a href="#what-you-can-import">What you can import</a></li><li><a href="#export-from-anki">Export from Anki</a></li><li><a href="#import-it">Import it</a></li><li><a href="#how-cards-look">How cards look</a></li><li><a href="#cloze-cards">Cloze cards</a></li><li><a href="#how-answers-are-checked">How answers are checked</a></li><li><a href="#only-my-cards">Only my cards</a></li><li><a href="#updating-and-removing-a-deck">Updating and removing a deck</a></li><li><a href="#limits">Limits</a></li><li><a href="#privacy-and-backups">Privacy and backups</a></li></ol>
+        </details>
+<p>QuizBlock reads Anki’s own deck files, pictures and cloze cards included, and can make every challenge a quiz from your cards. Every answer is still checked: you type it or pick one of four, never mark yourself.</p>
+
+<h2 id="what-you-can-import">What you can import</h2>
+<ul>
+  <li><strong>An Anki deck package</strong> (<code>.apkg</code>) or a whole collection (<code>.colpkg</code>). Use these for pictures.</li>
+  <li><strong>Anki’s “Notes in Plain Text” export</strong>, cloze notes included, without pictures.</li>
+  <li><strong>A CSV or TSV file</strong>, as in <a href="../../guides/add-your-own-decks/">add your own flashcard decks</a>.</li>
+</ul>
+<p>Anki’s “Cards in Plain Text” export can’t be used: its answers can’t be checked.</p>
+
+<h2 id="export-from-anki">Export from Anki</h2>
+<ol class="steps">
+  <li>In Anki, choose <strong>File</strong>, then <strong>Export</strong>, and pick <strong>Anki Deck Package (.apkg)</strong> and your deck.</li>
+  <li>Tick <strong>Include scheduling information</strong>, so QuizBlock can bring in only the cards you’ve studied, and keep media included for the pictures.</li>
+  <li>Save the file. If QuizBlock says it can’t read how the file is packed, export it again with <strong>Support older Anki versions</strong> ticked.</li>
+</ol>
+
+<h2 id="import-it">Import it</h2>
+<ol class="steps">
+  <li>In the dashboard, go to <strong>Settings</strong>. Under <strong>What you want to learn</strong>, click <strong>Import a deck</strong> in <strong>Your own decks</strong>, or drop the file onto that panel.</li>
+  <li>QuizBlock reads the file on this computer, uploading nothing, and shows a preview. Choose what comes in:
+    <ul>
+      <li><strong>Decks to bring in</strong>: the subdecks you want.</li>
+      <li><strong>Only cards you’ve studied in Anki</strong>: on by default when the file has study history.</li>
+      <li><strong>Pictures</strong>, with their size before QuizBlock shrinks large ones. Without them, cards that need a picture are left out.</li>
+    </ul>
+  </li>
+  <li>Check how many cards will be added, what’s left out and why, and the sample cards. Set the <strong>Name</strong> and click <strong>Add deck</strong>.</li>
+  <li>Keep the tab open while it saves. <strong>Cancel</strong> leaves your decks as they were.</li>
+</ol>
+<p>During setup, the <strong>Interests</strong> step offers the same: <strong>Study your own cards instead (from Anki, or a CSV)</strong>.</p>
+<p>Only cards QuizBlock can check come in, and the preview counts the rest: image occlusion cards (graded by eye), sound-only cards, answers too long to check or that are a picture, cards whose picture isn’t in the file, suspended cards and repeats. Pictures linking to the web are dropped: QuizBlock never goes online.</p>
+
+<h2 id="how-cards-look">How cards look</h2>
+<p>Cards appear in QuizBlock’s style; your deck’s styling and scripts are never used. Bold, italics, sub- and superscript and lists are kept, coloured text becomes bold, and sounds are dropped. Each card brings its question, its answer and one extra field (“Extra” or “Back Extra”, or else the first other field on the back), shown after you answer. Click a picture to see it larger.</p>
+
+<h2 id="cloze-cards">Cloze cards</h2>
+<p>A cloze card, labelled “Fill in the blank”, reads as the sentence with a blank in it.</p>
+<ul>
+  <li>Type the missing words into the blank. With several blanks, Enter moves to the next, and all must be right.</li>
+  <li>A card with one blank may offer four options instead, when there are three good wrong answers. Cards with several blanks are always typed.</li>
+  <li>A hint, as in <code>{{c1::three::number}}</code>, shows inside the blank.</li>
+  <li>Each cloze number is its own card with its own progress, as in Anki.</li>
+</ul>
+
+<h2 id="how-answers-are-checked">How answers are checked</h2>
+<ul>
+  <li>Answers up to 40 characters are typed or multiple choice, at random, when three good wrong answers exist; otherwise typed. Anki’s type-in cards with answers that short are always typed.</li>
+  <li>Answers of 41 to 160 characters are multiple choice only, and left out without three good wrong answers. Longer ones are left out.</li>
+  <li>A good wrong answer is another answer from the deck of the same kind and length, such as a number for a number, and never text already in the question.</li>
+  <li>Typed answers are matched forgivingly: case, accents and small typos don’t count against you.</li>
+</ul>
+
+<h2 id="only-my-cards">Only my cards</h2>
+<p>Under your decks, <strong>Quizzes ask</strong> offers:</p>
+<ul>
+  <li><strong>Subjects and decks</strong>: your decks mix in with your subjects (at least one is needed) as at most half of a quiz, and maps carry on.</li>
+  <li><strong>Only my cards</strong>: every challenge is a quiz from your cards, with no maps. The longer challenge is a longer quiz.</li>
+</ul>
+<p>Only my cards needs at least 50 cards in the decks you’ve switched on. If they drop below that, it pauses, and quizzes mix in subjects and maps again until you have 50.</p>
+<p>A quiz takes your cards due for review first, soonest first; then cards QuizBlock hasn’t asked you yet; then cards seen on an earlier day that aren’t due yet. A card you got right today isn’t asked again today; one you missed comes back later the same day. When none are left, QuizBlock’s own questions fill in, and the gate says how many. The quiz for switching a site off always uses QuizBlock’s questions.</p>
+<div class="note"><p>Changes apply at once. Turning on Only my cards, or importing, updating or switching on a deck, takes effect straight away. A challenge already waiting on the gate becomes one of your cards the next time it shows.</p></div>
+<p>QuizBlock keeps its own schedule for your cards: it doesn’t copy Anki’s due dates or change your reviews in Anki. The Learning page shows your progress under <strong>Your decks</strong>.</p>
+
+<h2 id="updating-and-removing-a-deck">Updating and removing a deck</h2>
+<p>Import a newer export of the same deck and the preview says “your progress is kept”; click <strong>Update deck</strong>. Removing a deck (the <strong>×</strong> beside it, then <strong>Remove it</strong>) deletes its cards and pictures.</p>
+
+<h2 id="limits">Limits</h2>
+<table>
+  <thead><tr><th>What</th><th>Limit</th></tr></thead>
+  <tbody>
+    <tr><td>Decks</td><td>10</td></tr>
+    <tr><td>Cards in one deck</td><td>50,000</td></tr>
+    <tr><td>Cards in all your decks</td><td>100,000</td></tr>
+    <tr><td>Pictures</td><td>1 GB a deck, 2 GB in all</td></tr>
+    <tr><td>One picture</td><td>10 MB; larger ones aren’t kept</td></tr>
+    <tr><td>Plain-text or CSV file</td><td>50 MB</td></tr>
+  </tbody>
+</table>
+<p>Pictures are shrunk to 1,600 pixels on their longest side.</p>
+
+<h2 id="privacy-and-backups">Privacy and backups</h2>
+<p>Decks stay on this computer: they’re never uploaded or synced. <strong>Export backup</strong> includes decks from text files but not Anki decks, which can be too big; your progress on them is kept, so import them again after restoring. See <a href="../../guides/backup-and-sync/">backup and sync</a> and the <a href="../../privacy.html">privacy policy</a>.</p>
+        </article>
+      </div>
+      <section class="more" aria-labelledby="more-title">
+        <h2 id="more-title">More guides</h2>
+        <ul class="tiles">
+          <li><a class="tile" href="../../guides/getting-started/">
+            
+            <span class="tile__title">Getting started with QuizBlock</span>
+            <span class="tile__text">Install QuizBlock, run the one-minute setup, and find your way around the gate, the toolbar popup and the dashboard.</span>
+          </a></li>
+          <li><a class="tile" href="../../guides/how-challenges-work/">
+            
+            <span class="tile__title">How challenges and unlocks work</span>
+            <span class="tile__text">What happens at the gate: the challenge QuizBlock picks, the minutes it earns, free minutes, daily limits and the three strictness settings.</span>
+          </a></li>
+          <li><a class="tile" href="../../guides/add-your-own-decks/">
+            
+            <span class="tile__title">Add your own flashcard decks</span>
+            <span class="tile__text">Turn a CSV, TSV or Anki deck into questions QuizBlock asks in its quizzes, next to its own subjects or on their own.</span>
+          </a></li>
+        </ul>
+      </section>
+    </div>
+    <section class="band" data-dark>
+      <div class="wrap band__inner">
+        <h2>Try it on the site you open most.</h2>
+        <p>Free for Chrome, Edge and Brave. No account, and nothing leaves your browser.</p>
+        <a class="btn btn--large" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=article&amp;utm_campaign=anki-decks"><span>Add to Chrome, it’s free</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="foot" data-dark>
+    <div class="wrap foot__inner">
+      <a class="brand brand--foot" href="../../" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="../../guides/">Guides</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="mailto:quizblockapp@gmail.com">Contact</a>
+        <a href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=site">Chrome Web Store</a>
+      </nav>
+      <span class="foot__copy">© 2026 QuizBlock</span>
+    </div>
+  </footer>
+</body>
+</html>
