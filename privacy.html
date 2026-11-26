@@ -5,49 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy policy · QuizBlock</title>
   <meta name="description" content="QuizBlock has no server, no account, no analytics and no advertising. Everything it stores stays in your browser.">
+  <link rel="canonical" href="https://victordjolo.github.io/quizblock-site/privacy.html">
+  <meta name="theme-color" content="#12395e">
   <link rel="icon" href="img/favicon-32.png">
+  <link rel="preload" href="fonts/young-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QuizBlock">
+  <meta property="og:title" content="Privacy policy · QuizBlock">
+  <meta property="og:description" content="QuizBlock has no server, no account, no analytics and no advertising. Everything it stores stays in your browser.">
+  <meta property="og:url" content="https://victordjolo.github.io/quizblock-site/privacy.html">
+  <meta property="og:image" content="https://victordjolo.github.io/quizblock-site/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
 </head>
-<body>
-  <div class="wrap">
-    <header class="bar">
-      <a class="brand" href="./">
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top top--solid on-light">
+    <div class="top__inner">
+      <a class="brand" href="./" aria-label="QuizBlock home">
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
-        QuizBlock
+        <span>QuizBlock</span>
       </a>
-    </header>
-  </div>
-  <main class="wrap doc">
-<h1>Privacy policy</h1>
-<p><em>Last updated: 18 November 2026</em></p>
+      <nav class="top__nav" aria-label="Main">
+        <a href="./#how">How it works</a>
+        <a href="guides/">Guides</a>
+        <a href="blog/">Blog</a>
+      </nav>
+      <details class="menu">
+        <summary><span class="menu__icon" aria-hidden="true"><i></i><i></i></span><span class="sr">Menu</span></summary>
+        <nav class="menu__panel" aria-label="Menu">
+          <a href="./#how">How it works</a>
+          <a href="guides/">Guides</a>
+          <a href="blog/">Blog</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+        </nav>
+      </details>
+      <a class="btn btn--small" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=header&amp;utm_campaign=page"><span>Add to Chrome</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <header class="article-head">
+        <h1>Privacy policy</h1>
+        <p class="article-lede">What QuizBlock stores, where it stays, and what it never does. The short version: no server, no account, no analytics, no ads.</p>
+        <p class="article-meta"><span>Last updated <time datetime="2026-11-25">25 November 2026</time></span></p>
+      </header>
+      <div class="article-grid">
+        <aside class="toc" aria-label="On this page">
+          <p class="toc__title">On this page</p>
+          <ol><li><a href="#the-short-version">The short version</a></li><li><a href="#what-quizblock-stores-and-where">What QuizBlock stores, and where</a></li><li><a href="#what-quizblock-can-see">What QuizBlock can see</a></li><li><a href="#what-quizblock-doesnt-do">What QuizBlock doesn't do</a></li><li><a href="#your-control">Your control</a></li><li><a href="#this-website">This website</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes</a></li><li><a href="#contact">Contact</a></li></ol>
+        </aside>
+        <article class="prose">
+        <details class="toc-mobile">
+          <summary>On this page</summary>
+          <ol><li><a href="#the-short-version">The short version</a></li><li><a href="#what-quizblock-stores-and-where">What QuizBlock stores, and where</a></li><li><a href="#what-quizblock-can-see">What QuizBlock can see</a></li><li><a href="#what-quizblock-doesnt-do">What QuizBlock doesn't do</a></li><li><a href="#your-control">Your control</a></li><li><a href="#this-website">This website</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes</a></li><li><a href="#contact">Contact</a></li></ol>
+        </details>
 <p>QuizBlock is a Chrome extension that puts a short learning challenge (find countries on a map, or answer a few questions) in front of websites you choose. This policy explains what it stores and where.</p>
-<h2>The short version</h2>
+<h2 id="the-short-version">The short version</h2>
 <p>QuizBlock has no server, no account, no analytics and no advertising. It does not collect, sell or share your personal data. Everything it needs is stored in your own browser.</p>
-<h2>What QuizBlock stores, and where</h2>
-<div class="table"><table><thead><tr><th>What</th><th>Where</th><th>Why</th></tr></thead><tbody><tr><td>Your settings: the sites you gate, strictness, free minutes, quiz subjects and level</td><td>Your browser (<code>chrome.storage.local</code>). If you leave <strong>Sync settings across computers</strong> on and Chrome sync is on for your profile, also in <code>chrome.storage.sync</code></td><td>To gate the sites you chose, the way you chose</td></tr><tr><td>Your learning progress: which countries and questions you've seen, when they're due again, daily totals of challenges, answers and minutes, the last 50 challenges</td><td>Your browser only (<code>chrome.storage.local</code>)</td><td>Spaced repetition, the dashboard and the weekly recap</td></tr><tr><td>Unlocks and pending challenges: how much time you have left on a site today, and the challenge waiting for you</td><td>Your browser only (<code>chrome.storage.local</code>)</td><td>So a reload can't re-roll a challenge, and time is counted correctly</td></tr></tbody></table></div>
+<h2 id="what-quizblock-stores-and-where">What QuizBlock stores, and where</h2>
+<table>
+<thead><tr><th>What</th><th>Where</th><th>Why</th></tr></thead>
+<tbody><tr><td>Your settings: the sites you gate, strictness, free minutes, quiz subjects and level</td><td>Your browser (<code>chrome.storage.local</code>). If you leave <strong>Sync settings across computers</strong> on and Chrome sync is on for your profile, also in <code>chrome.storage.sync</code></td><td>To gate the sites you chose, the way you chose</td></tr>
+<tr><td>Your learning progress: which countries and questions you've seen, when they're due again, daily totals of challenges, answers and minutes, the last 50 challenges</td><td>Your browser only (<code>chrome.storage.local</code>)</td><td>Spaced repetition, the dashboard and the weekly recap</td></tr>
+<tr><td>Decks you import (a CSV, or a deck from Anki) and their pictures</td><td>Your browser only (<code>chrome.storage.local</code> and IndexedDB). Never synced or uploaded</td><td>To quiz you on your own cards</td></tr>
+<tr><td>Unlocks and pending challenges: how much time you have left on a site today, and the challenge waiting for you</td><td>Your browser only (<code>chrome.storage.local</code>)</td><td>So a reload can't re-roll a challenge, and time is counted correctly</td></tr></tbody></table>
 <p>Daily totals are kept for 60 days, then deleted automatically.</p>
 <p><strong>Settings sync.</strong> When settings sync is on, Chrome copies your settings (not your progress) to the other computers where you're signed in to the same Chrome profile. This goes through Google's Chrome sync service under <a href="https://policies.google.com/privacy">Google's privacy policy</a>; QuizBlock itself never receives it. You can turn it off in QuizBlock's Settings, under <em>Your data</em>.</p>
-<h2>What QuizBlock can see</h2>
-<ul><li><strong>The sites on your list.</strong> QuizBlock uses Chrome's <code>declarativeNetRequest</code> rules to send visits to those sites to its own gate page, and shows the time left on the QuizBlock toolbar icon while they're unlocked. Chrome applies these rules itself; QuizBlock doesn't read the pages or what you do on them. If you gate only part of a site (say youtube.com/shorts), QuizBlock checks the address of pages on that site as you move around it, to notice when you enter that part. It looks at the address only, never the page's content, and keeps no record of it.</li><li><strong>Which tabs have a gated site open.</strong> To run the clock only while a gated site is open, QuizBlock checks whether any tab is showing one of your gated sites. It doesn't record your browsing history, and it doesn't look at tabs for any other site.</li><li><strong>The extensions page, during a focus lock (only if you ask).</strong> If you turn on "Also keep the extensions page closed" when starting a focus lock, Chrome asks you to let QuizBlock see your tabs. Until that lock ends, QuizBlock closes any tab showing the browser's extensions page. It doesn't record or keep anything about your tabs.</li><li><strong>The current tab, when you open QuizBlock's toolbar popup</strong>, so it can show that site's status or offer to gate it. This is used on the spot and not stored.</li></ul>
+<h2 id="what-quizblock-can-see">What QuizBlock can see</h2>
+<ul>
+<li><strong>The sites on your list.</strong> QuizBlock uses Chrome's <code>declarativeNetRequest</code> rules to send visits to those sites to its own gate page, and shows the time left on the QuizBlock toolbar icon while they're unlocked. Chrome applies these rules itself; QuizBlock doesn't read the pages or what you do on them. If you gate only part of a site (say youtube.com/shorts), QuizBlock checks the address of pages on that site as you move around it, to notice when you enter that part. It looks at the address only, never the page's content, and keeps no record of it.</li>
+<li><strong>Which tabs have a gated site open.</strong> To run the clock only while a gated site is open, QuizBlock checks whether any tab is showing one of your gated sites. It doesn't record your browsing history, and it doesn't look at tabs for any other site.</li>
+<li><strong>The extensions page, during a focus lock (only if you ask).</strong> If you turn on "Also keep the extensions page closed" when starting a focus lock, Chrome asks you to let QuizBlock see your tabs. Until that lock ends, QuizBlock closes any tab showing the browser's extensions page. It doesn't record or keep anything about your tabs.</li>
+<li><strong>The current tab, when you open QuizBlock's toolbar popup</strong>, so it can show that site's status or offer to gate it. This is used on the spot and not stored.</li></ul>
 <p>QuizBlock asks once for access to all sites so you can add new sites later without a prompt each time. That access is only used for the sites on your list.</p>
-<h2>What QuizBlock doesn't do</h2>
-<ul><li>It makes no network requests. Maps and the question bank are built into the extension.</li><li>It doesn't use cookies, trackers, analytics or third-party code that phones home.</li><li>It doesn't sell, rent or transfer any data, and doesn't use it for advertising, credit-worthiness or anything unrelated to gating your chosen sites.</li></ul>
-<h2>Your control</h2>
-<ul><li><strong>Back up and restore:</strong> Settings → <em>Your data</em> → <em>Export backup</em> downloads your settings and progress as a JSON file; <em>Restore a backup</em> reads one back in. The file never leaves your computer unless you move it.</li><li><strong>Erase progress:</strong> Settings → <em>Your data</em> → <em>Reset progress</em>.</li><li><strong>Stop syncing:</strong> turn off <em>Sync settings across computers</em>. Settings already in Chrome sync can be removed with Chrome's own controls for your synced data (chrome://settings/syncSetup).</li><li><strong>Remove everything:</strong> uninstalling QuizBlock deletes all its local data from that browser. When QuizBlock is removed, the browser opens one static “before you go” page from this website; it runs no scripts and records nothing, and no information about you is sent with it.</li></ul>
-<h2>This website</h2>
-<p>This website (this policy, the homepage and the “before you go” page) is a set of static pages hosted on GitHub Pages. It has no scripts, cookies or analytics. GitHub, which runs the hosting, may log visitors’ IP addresses for security, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
-<h2>Children</h2>
+<h2 id="what-quizblock-doesnt-do">What QuizBlock doesn't do</h2>
+<ul>
+<li>It makes no network requests. Maps and the question bank are built into the extension.</li>
+<li>It doesn't use cookies, trackers, analytics or third-party code that phones home.</li>
+<li>It doesn't sell, rent or transfer any data, and doesn't use it for advertising, credit-worthiness or anything unrelated to gating your chosen sites.</li></ul>
+<h2 id="your-control">Your control</h2>
+<ul>
+<li><strong>Back up and restore:</strong> Settings → <em>Your data</em> → <em>Export backup</em> downloads your settings and progress as a JSON file; <em>Restore a backup</em> reads one back in. The file never leaves your computer unless you move it.</li>
+<li><strong>Erase progress:</strong> Settings → <em>Your data</em> → <em>Reset progress</em>.</li>
+<li><strong>Remove a deck:</strong> Settings → <em>What you want to learn</em> → the × beside it. Its cards and pictures are deleted from your browser.</li>
+<li><strong>Stop syncing:</strong> turn off <em>Sync settings across computers</em>. Settings already in Chrome sync can be removed with Chrome's own controls for your synced data (chrome://settings/syncSetup).</li>
+<li><strong>Remove everything:</strong> uninstalling QuizBlock deletes all its local data from that browser. When QuizBlock is removed, the browser opens one static “before you go” page from this website; it runs no scripts and records nothing, and no information about you is sent with it.</li></ul>
+<h2 id="this-website">This website</h2>
+<p>This website (the homepage, the guides and blog, this policy and the “before you go” page) is a set of static pages hosted on GitHub Pages. It has no cookies, analytics or trackers. The homepage runs one small script of its own, for its animations (the globe, and a sample question you can answer): it loads files only from this website, stores nothing and sends nothing about you anywhere. The other pages run no scripts at all. GitHub, which runs the hosting, may log visitors’ IP addresses for security, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+<h2 id="children">Children</h2>
 <p>QuizBlock is a general-audience educational tool. It doesn't knowingly collect personal information from anyone, of any age.</p>
-<h2>Changes</h2>
+<h2 id="changes">Changes</h2>
 <p>If this policy changes, the new version will be published at the same address with a new date, and the change will be noted in the extension's release notes.</p>
-<h2>Contact</h2>
+<h2 id="contact">Contact</h2>
 <p>Questions about privacy, or anything else: <a href="mailto:quizblockapp@gmail.com">quizblockapp@gmail.com</a>.</p>
-
+        </article>
+      </div>
+    </div>
   </main>
-  <footer class="foot">
-    <div class="wrap">
-      <span>© 2026 QuizBlock</span>
-      <nav><a href="./">Home</a><a href="mailto:quizblockapp@gmail.com">Contact</a></nav>
+  <footer class="foot" data-dark>
+    <div class="wrap foot__inner">
+      <a class="brand brand--foot" href="./" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="guides/">Guides</a>
+        <a href="blog/">Blog</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:quizblockapp@gmail.com">Contact</a>
+        <a href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=site">Chrome Web Store</a>
+      </nav>
+      <span class="foot__copy">© 2026 QuizBlock</span>
     </div>
   </footer>
 </body>

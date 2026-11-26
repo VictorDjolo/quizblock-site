@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spaced repetition explained: how it works and how to use it · QuizBlock</title>
+  <meta name="description" content="What is spaced repetition? How the forgetting curve, the spacing effect and retrieval practice fit together, and how to use spaced repetition to remember more.">
+  <link rel="canonical" href="https://victordjolo.github.io/quizblock-site/blog/spaced-repetition-explained/">
+  <meta name="theme-color" content="#12395e">
+  <link rel="icon" href="../../img/favicon-32.png">
+  <link rel="preload" href="../../fonts/young-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../style.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="QuizBlock">
+  <meta property="og:title" content="Spaced repetition explained: how it works and how to use it · QuizBlock">
+  <meta property="og:description" content="What is spaced repetition? How the forgetting curve, the spacing effect and retrieval practice fit together, and how to use spaced repetition to remember more.">
+  <meta property="og:url" content="https://victordjolo.github.io/quizblock-site/blog/spaced-repetition-explained/">
+  <meta property="og:image" content="https://victordjolo.github.io/quizblock-site/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Spaced repetition explained: how it works and how to use it","description":"What is spaced repetition? How the forgetting curve, the spacing effect and retrieval practice fit together, and how to use spaced repetition to remember more.","datePublished":"2026-11-25","dateModified":"2026-11-25","author":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/"},"publisher":{"@type":"Organization","name":"QuizBlock","url":"https://victordjolo.github.io/quizblock-site/","logo":{"@type":"ImageObject","url":"https://victordjolo.github.io/quizblock-site/img/icon-128.png"}},"image":"https://victordjolo.github.io/quizblock-site/img/og.png","mainEntityOfPage":"https://victordjolo.github.io/quizblock-site/blog/spaced-repetition-explained/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"QuizBlock","item":"https://victordjolo.github.io/quizblock-site/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://victordjolo.github.io/quizblock-site/blog/"},{"@type":"ListItem","position":3,"name":"Spaced repetition explained: how it works and how to use it","item":"https://victordjolo.github.io/quizblock-site/blog/spaced-repetition-explained/"}]}</script>
+</head>
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top top--solid on-light">
+    <div class="top__inner">
+      <a class="brand" href="../../" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="top__nav" aria-label="Main">
+        <a href="../../#how">How it works</a>
+        <a href="../../guides/">Guides</a>
+        <a href="../../blog/" aria-current="page">Blog</a>
+      </nav>
+      <details class="menu">
+        <summary><span class="menu__icon" aria-hidden="true"><i></i><i></i></span><span class="sr">Menu</span></summary>
+        <nav class="menu__panel" aria-label="Menu">
+          <a href="../../#how">How it works</a>
+          <a href="../../guides/">Guides</a>
+          <a href="../../blog/" aria-current="page">Blog</a>
+          <a href="../../privacy.html">Privacy</a>
+        </nav>
+      </details>
+      <a class="btn btn--small" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=header&amp;utm_campaign=page"><span>Add to Chrome</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <header class="article-head">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="../../blog/">Blog</a></nav>
+        <h1>Spaced repetition explained: how it works and how to use it</h1>
+        <p class="article-lede">Spaced repetition means testing yourself at gaps that grow each time you remember. Here is the research behind it, how the gaps work, and how to start with cards, boxes or an app.</p>
+        <p class="article-meta"><span><time datetime="2026-11-25">25 November 2026</time></span><span>6 min read</span></p>
+      </header>
+      <div class="article-grid">
+        <aside class="toc" aria-label="On this page">
+          <p class="toc__title">On this page</p>
+          <ol><li><a href="#the-forgetting-curve-how-fast-we-forget">The forgetting curve: how fast we forget</a></li><li><a href="#the-spacing-effect-why-little-and-often-wins">The spacing effect: why little and often wins</a></li><li><a href="#testing-beats-rereading">Testing beats rereading</a></li><li><a href="#how-spaced-repetition-works">How spaced repetition works</a></li><li><a href="#how-to-use-spaced-repetition-well">How to use spaced repetition well</a></li><li><a href="#how-quizblock-uses-spaced-repetition">How QuizBlock uses spaced repetition</a></li></ol>
+        </aside>
+        <article class="prose">
+        <details class="toc-mobile">
+          <summary>On this page</summary>
+          <ol><li><a href="#the-forgetting-curve-how-fast-we-forget">The forgetting curve: how fast we forget</a></li><li><a href="#the-spacing-effect-why-little-and-often-wins">The spacing effect: why little and often wins</a></li><li><a href="#testing-beats-rereading">Testing beats rereading</a></li><li><a href="#how-spaced-repetition-works">How spaced repetition works</a></li><li><a href="#how-to-use-spaced-repetition-well">How to use spaced repetition well</a></li><li><a href="#how-quizblock-uses-spaced-repetition">How QuizBlock uses spaced repetition</a></li></ol>
+        </details>
+<p>Spaced repetition is a way of reviewing what you learn at gradually increasing gaps, so that you test yourself on something just as you're about to forget it. It's one of the best-supported ideas in the science of learning, and it's simple to use, with a box of index cards or an app that keeps track for you. This guide explains what spaced repetition is, why it works, how the review gaps grow, and how to start.</p>
+
+<h2 id="the-forgetting-curve-how-fast-we-forget">The forgetting curve: how fast we forget</h2>
+<p>In 1885 the German psychologist Hermann Ebbinghaus published the results of an unusual experiment on himself. He memorised lists of nonsense syllables, so that nothing he already knew could help, and then measured how much he had kept after different delays. He did it by timing how long it took to relearn each list: the less time relearning took, the more had survived.</p>
+<p>The pattern he found is now called the forgetting curve. Forgetting is fastest at the start, in the first hours and the first day, and then slows down. What's left after a few days fades much more gently.</p>
+<p>He noticed something else too. Spreading his repetitions over several days took fewer repetitions in total than packing them into one sitting. That observation, that spacing beats cramming, has been tested ever since.</p>
+
+<h2 id="the-spacing-effect-why-little-and-often-wins">The spacing effect: why little and often wins</h2>
+<p>The spacing effect is one of the most often replicated findings in psychology. In 2006 a team led by Nicholas Cepeda pooled the results of hundreds of experiments on learning words and facts, and found that spreading study out over time led to better long-term memory than massing it together.</p>
+<p>The frustrating part is that cramming feels better. Straight after a cramming session, the material seems fluent and familiar. Spaced study feels harder, because each time you come back you've forgotten a little and have to work to recall it. The psychologist Robert Bjork calls effort like this a "desirable difficulty": it feels like slower progress, but it's part of what makes the memory last.</p>
+
+<h2 id="testing-beats-rereading">Testing beats rereading</h2>
+<p>Spacing is half the story. The other half is how you review. Rereading notes is the most common way to study, and one of the least effective. Pulling an answer out of memory works much better. This is called the testing effect, or retrieval practice.</p>
+<p>A well-known study by Henry Roediger and Jeffrey Karpicke, published in 2006, shows it clearly. Students read short prose passages, then either read them again or wrote down as much as they could remember. Tested five minutes later, the rereaders did slightly better. Tested two days or a week later, the students who had practised recalling remembered clearly more.</p>
+<p>That's why flashcards work when they're used properly: they make you retrieve. The key is to really answer before you turn the card over, rather than glancing at it and thinking "yes, I knew that".</p>
+
+<h2 id="how-spaced-repetition-works">How spaced repetition works</h2>
+<p>Spaced repetition puts those two ideas together. You test yourself (retrieval), at gaps that grow longer each time you get it right (spacing), and you go back to short gaps when you get it wrong.</p>
+<p>A typical schedule for one fact might look like this:</p>
+<ul>
+<li>Learn it today.</li>
+<li>Review it tomorrow.</li>
+<li>Then after three days, a week, two weeks, a month.</li>
+<li>Miss it at any point, and it goes back to the start.</li>
+</ul>
+<p>The exact numbers matter less than the shape. Each successful recall makes the memory more durable, so the next review can wait longer. Things you know well cost you almost no time, and your effort goes where it's needed: on the things you keep forgetting.</p>
+
+<h3>Leitner boxes: spaced repetition on paper</h3>
+<p>In the 1970s the German science journalist Sebastian Leitner described a simple way to do this with index cards and a few boxes. It still works well:</p>
+<ol class="steps">
+<li><strong>Set up five boxes</strong>, or five sections in one box, numbered 1 to 5.</li>
+<li><strong>Put new cards in box 1.</strong></li>
+<li><strong>Review on a schedule:</strong> box 1 every day, box 2 every few days, box 3 once a week, and longer gaps for the boxes after that.</li>
+<li><strong>Answer each card before you flip it.</strong> If you got it right, it moves up a box. If not, it goes back to box 1.</li>
+</ol>
+<p>Cards you know drift up into boxes you rarely open. Cards you struggle with stay in box 1, where you see them often.</p>
+
+<h3>Flashcard apps</h3>
+<p>Apps such as Anki do the scheduling for you: they work out when each card is due and show you only those. That's a relief once you have hundreds of cards, because nobody wants to track a thousand due dates by hand.</p>
+
+<h2 id="how-to-use-spaced-repetition-well">How to use spaced repetition well</h2>
+<ul>
+<li><strong>One fact per card.</strong> "What's the capital of Australia?" works better than "Everything about Australia".</li>
+<li><strong>Understand before you memorise.</strong> Spaced repetition makes things stick. It doesn't explain them.</li>
+<li><strong>Be honest when you mark yourself.</strong> Nearly right, or right after a long struggle, means it needs another look soon.</li>
+<li><strong>A few minutes every day.</strong> Short daily sessions are easier to keep up than a long weekly one, and they space your reviews for you.</li>
+<li><strong>Go easy on new cards.</strong> Every new card brings future reviews with it. Add a handful a day and your reviews stay manageable.</li>
+<li><strong>Mix topics.</strong> Shuffling related material makes you work out which answer fits, which helps you tell similar things apart.</li>
+</ul>
+<div class="note"><p>If you fall behind, don't try to clear weeks of reviews in one go. Do a normal day's worth, and catch up over the next few days.</p></div>
+
+<h2 id="how-quizblock-uses-spaced-repetition">How QuizBlock uses spaced repetition</h2>
+<p>QuizBlock is a free Chrome extension that keeps distracting sites locked until you beat a short challenge: find a few countries on a map, or answer a few questions. Behind those challenges is a spaced repetition system, so each one doubles as a short review session.</p>
+<p>Every country and question you meet is tracked on its own, in a five-box Leitner system with a few rules borrowed from flashcard apps:</p>
+<ul>
+<li><strong>Right first time:</strong> it moves up a box, and the gap grows, from 3 days to 7, then 16, then 35.</li>
+<li><strong>Found on a later try</strong> (on a map): it comes back tomorrow without moving up.</li>
+<li><strong>Missed:</strong> it drops to the first box and is due again later the same day, but not within ten minutes, so you can't answer from short-term memory. Getting it right that same day only earns a review tomorrow.</li>
+<li><strong>It moves up only when you remember it on a later day.</strong> Answering something before it's due earns nothing.</li>
+</ul>
+<p>Each challenge asks what's due first, then brings in new material. When something is back because you missed it, the challenge tells you. A country or question counts as known once you've got it right first time on a few separate days.</p>
+<figure><img decoding="async" src="../../img/5-learning.png" width="1280" style="--w: 1280px" height="800" alt="QuizBlock's Learning page: a world map with countries coloured Know it, Learning, Keeps slipping or Not started, above a list of regions and a list of what's coming back soon." loading="lazy"><figcaption>The Learning page shows what you know, what you're learning and what keeps slipping.</figcaption></figure>
+<p>The questions come from a hand-checked bank of more than 1,500, across ten subjects from history and science to music and sport. You can also import your own deck as a CSV or TSV file, and it mixes in with the built-in subjects: see <a href="../../guides/add-your-own-decks/">Add your own decks</a>. For how each challenge is picked, see <a href="../../guides/how-challenges-work/">How challenges work</a>. And if geography is your goal, here's <a href="../../blog/learn-every-country/">how to learn every country</a> with the same approach.</p>
+<p>QuizBlock is free, with no account, and your progress stays in your browser. <a href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=blog&amp;utm_campaign=spaced-repetition-explained">Add QuizBlock to Chrome</a> and turn the moments you'd spend scrolling into reviews.</p>
+        </article>
+      </div>
+      <section class="more" aria-labelledby="more-title">
+        <h2 id="more-title">More from the blog</h2>
+        <ul class="tiles">
+          <li><a class="tile" href="../../blog/how-to-block-youtube-shorts/">
+            <time class="tile__meta" datetime="2026-11-25">25 November 2026</time>
+            <span class="tile__title">How to block YouTube Shorts on Chrome and keep the rest</span>
+            <span class="tile__text">Shorts are built so that one more always feels cheap. Here is how to block just the Shorts part of YouTube in Chrome, or put a short challenge in front of it, while the rest of YouTube stays as it is.</span>
+          </a></li>
+          <li><a class="tile" href="../../blog/learn-every-country/">
+            <time class="tile__meta" datetime="2026-11-25">25 November 2026</time>
+            <span class="tile__title">How to learn every country in the world: a practical plan</span>
+            <span class="tile__text">The UN has 193 member states, and you can learn them all a few at a time. A region-by-region plan, tactics for the hardest parts of the map, and a way to make it stick.</span>
+          </a></li>
+          <li><a class="tile" href="../../blog/how-to-stop-doomscrolling/">
+            <time class="tile__meta" datetime="2026-11-25">25 November 2026</time>
+            <span class="tile__title">How to stop doomscrolling: what actually helps</span>
+            <span class="tile__text">Feeds are built to have no stopping point, and scrolling runs on habit. Here is why it is so hard to put the phone down, and the practical changes that make it easier.</span>
+          </a></li>
+        </ul>
+      </section>
+    </div>
+    <section class="band" data-dark>
+      <div class="wrap band__inner">
+        <h2>Try it on the site you open most.</h2>
+        <p>Free for Chrome, Edge and Brave. No account, and nothing leaves your browser.</p>
+        <a class="btn btn--large" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=article&amp;utm_campaign=spaced-repetition-explained"><span>Add to Chrome, it’s free</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="foot" data-dark>
+    <div class="wrap foot__inner">
+      <a class="brand brand--foot" href="../../" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="../../guides/">Guides</a>
+        <a href="../../blog/">Blog</a>
+        <a href="../../privacy.html">Privacy</a>
+        <a href="mailto:quizblockapp@gmail.com">Contact</a>
+        <a href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=site">Chrome Web Store</a>
+      </nav>
+      <span class="foot__copy">© 2026 QuizBlock</span>
+    </div>
+  </footer>
+</body>
+</html>

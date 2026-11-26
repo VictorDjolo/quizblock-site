@@ -3,36 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Before you go · QuizBlock</title>
+  <title>QuizBlock is gone. Was it on purpose? · QuizBlock</title>
+  <meta name="description" content="QuizBlock was removed from your browser.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#12395e">
   <link rel="icon" href="img/favicon-32.png">
-  <style>
-    /* A static page: no scripts, no analytics, no tracking parameters. The only link is a mailto. */
-    :root { --bg: #12395e; --ink: #f3f6f1; --muted: #a9bdd0; --accent: #f5c242; --line: rgb(243 246 241 / 0.14); color-scheme: dark; }
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 32px 16px; background: var(--bg); color: var(--ink); font: 17px/1.55 "Segoe UI", system-ui, sans-serif; }
-    main { max-width: 34em; }
-    h1 { margin: 0 0 12px; font: 400 clamp(32px, 6vw, 46px)/1.1 "Iowan Old Style", Georgia, serif; }
-    p { color: var(--muted); }
-    ul { padding-left: 20px; color: var(--muted); }
-    li { margin: 6px 0; }
-    strong { color: var(--ink); }
-    .note { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; }
-    a { color: var(--accent); }
-  </style>
+  <link rel="preload" href="fonts/young-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QuizBlock">
+  <meta property="og:title" content="QuizBlock is gone. Was it on purpose? · QuizBlock">
+  <meta property="og:description" content="QuizBlock was removed from your browser.">
+  <meta property="og:url" content="https://victordjolo.github.io/quizblock-site/uninstall.html">
+  <meta property="og:image" content="https://victordjolo.github.io/quizblock-site/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
 </head>
-<body>
-  <main>
-    <h1>QuizBlock is gone. Was it on purpose?</h1>
-    <p>If you removed it in a weak moment, that’s exactly the moment it was there for. It takes a minute to add back, and your sites and settings return if settings sync was on.</p>
-    <p>If you meant it, thank you for trying it. A few things that might help without it:</p>
-    <ul>
-      <li><strong>Name the pull.</strong> Before opening a site, say what you’re there for. It’s surprisingly hard to scroll without a reason once you’ve said one out loud.</li>
-      <li><strong>Move the door.</strong> Log out of the sites that pull hardest, so getting in takes a deliberate step.</li>
-      <li><strong>Keep what you learned.</strong> Spaced repetition works anywhere: a few minutes a day with flashcards keeps the countries and facts you collected.</li>
-    </ul>
-    <p>If something didn’t work for you, I’d really like to know. One line is plenty: <a href="mailto:quizblockapp@gmail.com?subject=Why%20I%20removed%20QuizBlock">quizblockapp@gmail.com</a></p>
-    <p class="note">This page is a plain web page the browser opens when QuizBlock is removed. It runs no scripts and records nothing. QuizBlock’s data was stored only in your browser, and removing the extension deleted it.</p>
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top top--solid">
+    <div class="top__inner">
+      <a class="brand" href="./" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="top__nav" aria-label="Main">
+        <a href="./#how">How it works</a>
+        <a href="guides/">Guides</a>
+        <a href="blog/">Blog</a>
+      </nav>
+      <details class="menu">
+        <summary><span class="menu__icon" aria-hidden="true"><i></i><i></i></span><span class="sr">Menu</span></summary>
+        <nav class="menu__panel" aria-label="Menu">
+          <a href="./#how">How it works</a>
+          <a href="guides/">Guides</a>
+          <a href="blog/">Blog</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </details>
+      <a class="btn btn--small" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=header&amp;utm_campaign=page"><span>Add to Chrome</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="note-page" data-dark>
+      <div class="wrap">
+        <div class="note-page__inner">
+          <h1>QuizBlock is gone. Was it on purpose?</h1>
+          <div class="prose">
+<p>If you removed it in a weak moment, that’s exactly the moment it was there for. It takes a minute to add back, and your sites and settings return if settings sync was on.</p>
+<p><a class="btn" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh"><span>Add QuizBlock back</span></a></p>
+<p>If you meant it, thank you for trying it. A few things that might help without it:</p>
+<ul>
+<li><strong>Name the pull.</strong> Before opening a site, say what you’re there for. It’s surprisingly hard to scroll without a reason once you’ve said one out loud.</li>
+<li><strong>Move the door.</strong> Log out of the sites that pull hardest, so getting in takes a deliberate step.</li>
+<li><strong>Keep what you learned.</strong> Spaced repetition works anywhere: a few minutes a day with flashcards keeps the countries and facts you collected.</li>
+</ul>
+<p>If something didn’t work for you, I’d really like to know. One line is plenty: <a href="mailto:quizblockapp@gmail.com?subject=Why%20I%20removed%20QuizBlock">quizblockapp@gmail.com</a></p>
+<p class="fine">This page is a plain web page the browser opens when QuizBlock is removed. It runs no scripts and records nothing. QuizBlock’s data was stored only in your browser, and removing the extension deleted it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="foot" data-dark>
+    <div class="wrap foot__inner">
+      <a class="brand brand--foot" href="./" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="guides/">Guides</a>
+        <a href="blog/">Blog</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:quizblockapp@gmail.com">Contact</a>
+        <a href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=site">Chrome Web Store</a>
+      </nav>
+      <span class="foot__copy">© 2026 QuizBlock</span>
+    </div>
+  </footer>
 </body>
 </html>

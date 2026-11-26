@@ -5,89 +5,335 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>QuizBlock: the site blocker that makes you learn</title>
   <meta name="description" content="QuizBlock is a free site blocker for Chrome. Distracting sites stay locked until you earn your way back in, and you learn as you go.">
+  <meta name="theme-color" content="#12395e">
+  <link rel="canonical" href="https://victordjolo.github.io/quizblock-site/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QuizBlock","applicationCategory":"BrowserApplication","operatingSystem":"Chrome, Edge, Brave","description":"A free site blocker for Chrome: distracting sites stay locked until you find a few countries on a map or answer a few questions.","url":"https://victordjolo.github.io/quizblock-site/","downloadUrl":"https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
   <link rel="icon" href="img/favicon-32.png">
+  <link rel="preload" href="fonts/young-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
   <meta property="og:title" content="QuizBlock: Site Blocker – Block Websites, Learn to Unlock">
   <meta property="og:description" content="Block distracting sites. Learn your way back in.">
   <meta property="og:image" content="https://victordjolo.github.io/quizblock-site/img/og.png">
   <meta property="og:url" content="https://victordjolo.github.io/quizblock-site/">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- Motion only: marks that the page script runs, so content hidden for its entrance is never stuck hidden without it. -->
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
-  <div class="stage">
-    <div class="wrap">
-      <header class="bar">
-        <a class="brand" href="./">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
-          QuizBlock
-        </a>
-        <nav><a href="privacy.html">Privacy</a></nav>
-      </header>
+  <a class="skip" href="#main">Skip to content</a>
 
-      <section class="hero">
-        <div>
-          <h1>Block distracting sites. Learn your way back in.</h1>
-          <p>QuizBlock is a free site blocker for Chrome. YouTube, Instagram, TikTok and any site you add stay locked until you earn your way back in by beating a challenge. When your time runs out, they lock again.</p>
-          <div class="cta">
-            <a class="btn" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=button&amp;utm_campaign=home">Add to Chrome, it's free</a>
-            <small>Free. No account. Nothing leaves your browser.</small>
+  <!-- build:header -->
+  <header class="top" data-top>
+    <div class="top__inner">
+      <a class="brand" href="./" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="top__nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="guides/">Guides</a>
+        <a href="blog/">Blog</a>
+      </nav>
+      <details class="menu">
+        <summary><span class="menu__icon" aria-hidden="true"><i></i><i></i></span><span class="sr">Menu</span></summary>
+        <nav class="menu__panel" aria-label="Menu">
+          <a href="#how">How it works</a>
+          <a href="guides/">Guides</a>
+          <a href="blog/">Blog</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </details>
+      <a class="btn btn--small" href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=header&amp;utm_campaign=home"><span>Add to Chrome</span></a>
+    </div>
+  </header>
+  <!-- /build:header -->
+
+  <section class="hero" data-hero data-dark>
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <h1 class="hero__title"><span class="w" style="--i: 0"><span>Block</span></span> <span class="w" style="--i: 1"><span>distracting</span></span> <span class="w" style="--i: 2"><span>sites.</span></span> <span class="w" style="--i: 3"><span>Learn</span></span> <span class="w" style="--i: 4"><span>your</span></span> <span class="w" style="--i: 5"><span>way</span></span> <span class="w" style="--i: 6"><span>back</span></span> <span class="w" style="--i: 7"><span>in.</span></span></h1>
+        <p class="hero__lede">YouTube, Instagram, TikTok and any site you add stay locked until you find a few countries on a map or answer a few questions. When your time is up, they lock again.</p>
+        <div class="hero__cta">
+          <a class="btn btn--large" data-magnetic href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=button&amp;utm_campaign=home"><span>Add to Chrome, it’s free</span></a>
+          <p class="hero__note">No account. Nothing leaves your browser.</p>
+        </div>
+        <p class="hero__more">For Chrome, Edge and Brave. <a href="#get">iPhone app on the way.</a></p>
+      </div>
+
+      <div class="hero__globe" data-globe>
+        <div class="globe">
+          <div class="globe__fallback" aria-hidden="true"></div>
+          <canvas class="globe__canvas" role="img" aria-label="A globe coloured in with the countries a QuizBlock user knows. Point at a country to see its name, or drag to turn the globe."></canvas>
+          <div class="globe__label" aria-hidden="true" data-globe-label></div>
+        </div>
+
+        <div class="gate" aria-hidden="true" data-gate>
+          <div class="gate__site">
+            <svg viewBox="0 0 32 32"><path d="M11.2 11.9A5 5 0 0 1 21 10.5c0 2.6-1.8 3.5-3.2 4.2c-1.1.6-1.8 1.3-1.8 2.8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="6.5" y="16" width="19" height="13" rx="3.5" fill="#f5c242"/><circle cx="16" cy="22.3" r="2.3" fill="#12395e"/></svg>
+            <span data-gate-domain>youtube.com</span>
+          </div>
+          <p class="gate__title"><span data-gate-title>YouTube is locked.</span></p>
+          <p class="gate__lede" data-gate-lede>Find 10 countries in Europe and YouTube opens for 10 minutes.</p>
+        </div>
+
+        <ul class="legend" aria-label="Globe colours">
+          <li><i class="dot dot--known"></i>Countries you know</li>
+          <li><i class="dot dot--learning"></i>Still learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="how" id="how">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <h2>How it works</h2>
+          <p>About two minutes of learning between you and the feed.</p>
+        </header>
+
+        <div class="how__grid">
+          <div class="steps" data-steps>
+            <span class="steps__rail" aria-hidden="true"><span class="steps__fill" data-rail></span></span>
+            <ol class="steps__list">
+            <li class="step is-active" data-step="0">
+              <h3><span class="step__node" aria-hidden="true"></span>Open a site you’ve blocked</h3>
+              <p>Instead of the feed, QuizBlock shows what it takes to get in: find 10 countries on a map, or get 8 questions right.</p>
+              <figure class="step__shot"><div class="frame"><img src="img/1-gate.png" width="1280" height="800" alt="QuizBlock’s gate: “YouTube is locked. Find 10 countries in Europe and YouTube opens for 10 minutes.”" loading="lazy"></div></figure>
+            </li>
+            <li class="step" data-step="1">
+              <h3><span class="step__node" aria-hidden="true"></span>Win the challenge</h3>
+              <p>It takes about two minutes. There’s no skip button, and reloading the page won’t give you an easier one.</p>
+              <figure class="step__shot"><div class="frame"><img src="img/2-map.png" width="1280" height="800" alt="A map challenge: find Poland on a map of Europe, with five countries already found." loading="lazy"></div></figure>
+            </li>
+            <li class="step" data-step="2">
+              <h3><span class="step__node" aria-hidden="true"></span>Your minutes start</h3>
+              <p>The site opens for 10 minutes. The countdown sits on QuizBlock’s toolbar icon and only runs while the site is open. At zero, it locks again.</p>
+              <figure class="step__shot step__shot--bar" aria-hidden="true">
+                <div class="minibar">
+                  <span class="minibar__url">youtube.com</span>
+                  <span class="qb-icon"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#12395e"/><path d="M11.2 11.9A5 5 0 0 1 21 10.5c0 2.6-1.8 3.5-3.2 4.2c-1.1.6-1.8 1.3-1.8 2.8" fill="none" stroke="#f3f6f1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="6.5" y="16" width="19" height="13" rx="3.5" fill="#f5c242"/><circle cx="16" cy="22.3" r="2.3" fill="#12395e"/></svg><b class="badge is-on" data-badge>10m</b></span>
+                </div>
+              </figure>
+            </li>
+            <li class="step" data-step="3">
+              <h3><span class="step__node" aria-hidden="true"></span>Watch what you know grow</h3>
+              <p>Countries you find colour in your map, anything you miss comes back until it sticks, and a weekly recap shows how often you walked away instead.</p>
+              <figure class="step__shot"><div class="frame"><img src="img/4-week.png" width="1280" height="800" alt="The weekly recap: 6 new things learned, 75 minutes on gated sites, 1 gate walked away from." loading="lazy"></div></figure>
+            </li>
+            </ol>
+          </div>
+
+          <div class="how__stage" aria-hidden="true">
+            <div class="browser">
+              <div class="browser__bar">
+                <span class="browser__dots"><i></i><i></i><i></i></span>
+                <span class="browser__url"><svg viewBox="0 0 16 16"><path d="M5 7V5.5a3 3 0 0 1 6 0V7" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="3.5" y="7" width="9" height="6.5" rx="1.6" fill="currentColor"/></svg><span data-address>youtube.com</span></span>
+                <span class="qb-icon"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#12395e"/><path d="M11.2 11.9A5 5 0 0 1 21 10.5c0 2.6-1.8 3.5-3.2 4.2c-1.1.6-1.8 1.3-1.8 2.8" fill="none" stroke="#f3f6f1" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><rect x="6.5" y="16" width="19" height="13" rx="3.5" fill="#f5c242"/><circle cx="16" cy="22.3" r="2.3" fill="#12395e"/></svg><b class="badge" data-badge>10m</b></span>
+              </div>
+              <div class="browser__view">
+                <img class="screen is-on" data-screen="0" src="img/1-gate.png" width="1280" height="800" alt="" decoding="async" loading="lazy">
+                <img class="screen" data-screen="1" src="img/2-map.png" width="1280" height="800" alt="" decoding="async" loading="lazy">
+                <img class="screen" data-screen="1b" src="img/3-quiz.png" width="1280" height="800" alt="" decoding="async" loading="lazy">
+                <div class="screen feed" data-screen="2">
+                  <div class="feed__side"><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="feed__grid">
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                    <div class="feed__item"><b></b><i></i><i></i></div>
+                  </div>
+                </div>
+                <img class="screen" data-screen="3" src="img/4-week.png" width="1280" height="800" alt="" decoding="async" loading="lazy">
+              </div>
+              <p class="callout" data-callout>Counts down only while YouTube is open</p>
+            </div>
           </div>
         </div>
-        <div class="shot"><img src="img/1-gate.png" width="1280" height="800" alt="QuizBlock's gate: “YouTube is locked. Find 10 countries in Europe and YouTube opens for 10 minutes.” next to a globe coloured in with the countries you know."></div>
-      </section>
-    </div>
-  </div>
+      </div>
+    </section>
 
-  <main class="wrap">
-    <section class="features">
-      <div class="feature">
-        <div>
+    <section class="learn" id="learn">
+      <div class="wrap learn__grid">
+        <div class="learn__copy" data-reveal>
           <h2>Learn something every time</h2>
-          <p>Every unlock teaches you something real.</p>
-          <ul>
+          <p class="learn__lede">Every unlock teaches you something real, and QuizBlock keeps track of what you’ve missed.</p>
+          <ul class="facts">
             <li>Interactive maps of every continent, with all 193 UN member states.</li>
             <li>Over 1,500 hand-checked questions across geography, history, science, nature, art, music, sport and more.</li>
             <li>Spaced repetition: anything you miss comes back until it sticks.</li>
+            <li>Or import your own flashcards.</li>
           </ul>
         </div>
-        <div class="shot"><img src="img/2-map.png" width="1280" height="800" alt="A map challenge: find a country on a map of Europe." loading="lazy"></div>
-      </div>
 
-      <div class="feature">
-        <div>
-          <h2>Built to actually work</h2>
-          <p>Most blockers are easy to give in to. QuizBlock makes you earn every minute.</p>
-          <ul>
-            <li>No skip button: a site stays locked until you earn your way in.</li>
-            <li>Daily limits cap your total time on each site.</li>
-            <li>No giving in on impulse: relaxing your rules waits until tomorrow.</li>
-            <li>Focus hours and focus locks block everything while you work.</li>
-            <li>Block just YouTube Shorts or Instagram Reels and keep the rest.</li>
-          </ul>
+        <div class="deck" data-reveal>
+          <div class="deck__stack" data-deck>
+            <div class="card card--back card--back2" aria-hidden="true"></div>
+            <div class="card card--back card--back1" aria-hidden="true"></div>
+            <article class="card card--front" data-card aria-labelledby="card-q">
+              <p class="card__subject"><i style="--plate: var(--mint)"></i><span>Nature</span></p>
+              <h3 class="card__q" id="card-q">What colour is a polar bear’s skin?</h3>
+              <div class="card__options">
+                <button type="button" class="opt">Pink</button>
+                <button type="button" class="opt">Black</button>
+                <button type="button" class="opt">White</button>
+                <button type="button" class="opt">Grey</button>
+              </div>
+              <div class="card__result" aria-live="polite"></div>
+            </article>
+          </div>
+          <p class="deck__hint">Pick an answer. Every question here comes from QuizBlock’s question bank.</p>
         </div>
-        <div class="shot"><img src="img/3-quiz.png" width="1280" height="800" alt="A quiz question, just answered, with a fact about the answer." loading="lazy"></div>
-      </div>
-
-      <div class="feature">
-        <div>
-          <h2>See your week</h2>
-          <p>A weekly recap shows what you learned, how many challenges you took and how often you walked away instead, compared with the week before.</p>
-        </div>
-        <div class="shot"><img src="img/4-week.png" width="1280" height="800" alt="The weekly recap in QuizBlock's dashboard." loading="lazy"></div>
       </div>
     </section>
 
-    <section class="promise">
-      <h2>Private by design</h2>
-      <p>No account, no server, no analytics, no ads. Your sites, settings and progress stay in your browser. Read the <a href="privacy.html">privacy policy</a>.</p>
+    <section class="strict" id="strict">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <h2>Built to actually work</h2>
+          <p>Most blockers are easy to give in to. QuizBlock makes you earn every minute.</p>
+        </header>
+        <ul class="rules">
+          <li data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/><path d="M12 14.5v2"/></svg>
+            <h3>No skip button</h3>
+            <p>A site stays locked until you’ve earned your way in.</p>
+          </li>
+          <li data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="7.5"/><path d="M12 13V9"/><path d="M9.5 2.5h5"/><path d="M18 6.5l1.5-1.5"/></svg>
+            <h3>Daily limits</h3>
+            <p>Cap your total time on each site, however many challenges you win.</p>
+          </li>
+          <li data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17"/><path d="M8 3v4M16 3v4"/><path d="M10 15h4.5m0 0-1.8-1.8m1.8 1.8-1.8 1.8"/></svg>
+            <h3>Changes of heart wait a day</h3>
+            <p>Tighten your rules instantly. Loosening them only takes effect tomorrow.</p>
+          </li>
+          <li data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+            <h3>Focus hours</h3>
+            <p>Block everything on your list while you work, on a schedule or for a set time.</p>
+          </li>
+          <li data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M10.5 9.5v5l4-2.5z"/><path d="M3.5 3.5l17 17"/></svg>
+            <h3>Only the worst parts</h3>
+            <p>Block YouTube Shorts or Instagram Reels and keep the rest of the site.</p>
+          </li>
+          <li data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="3"/></svg>
+            <h3>Hard to switch off</h3>
+            <p>Turning a site off takes a quiz and a 20-second pause. Turning it back on is instant.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- build:reading -->
+  <section class="reading" id="guides">
+      <div class="wrap">
+        <header class="head" data-reveal>
+          <h2>Guides and articles</h2>
+          <p>Set QuizBlock up the way you want it, and get more out of the minutes you earn.</p>
+        </header>
+        <div class="reading__grid">
+          <ul class="tiles" data-reveal>
+          <li><a class="tile" href="guides/getting-started/">
+            
+            <span class="tile__title">Getting started with QuizBlock</span>
+            <span class="tile__text">Install QuizBlock, run the one-minute setup, and find your way around the gate, the toolbar popup and the dashboard.</span>
+          </a></li>
+          <li><a class="tile" href="guides/how-challenges-work/">
+            
+            <span class="tile__title">How challenges and unlocks work</span>
+            <span class="tile__text">What happens at the gate: the challenge QuizBlock picks, the minutes it earns, free minutes, daily limits and the three strictness settings.</span>
+          </a></li>
+          <li><a class="tile" href="guides/add-your-own-decks/">
+            
+            <span class="tile__title">Add your own flashcard decks</span>
+            <span class="tile__text">Turn a CSV, TSV or Anki export into questions QuizBlock asks in its quizzes, next to its own subjects.</span>
+          </a></li>
+          <li><a class="tile" href="guides/block-part-of-a-site/">
+            
+            <span class="tile__title">Block YouTube Shorts, Instagram Reels and other parts of a site</span>
+            <span class="tile__text">Add a path like youtube.com/shorts or a subdomain to your list, and see how parts of sites, subdomains and sister domains are matched.</span>
+          </a></li>
+          </ul>
+          <div class="reading__side" data-reveal>
+            <h3 class="reading__label">From the blog</h3>
+            <ul class="posts">
+              <li><a href="blog/how-to-block-youtube-shorts/"><span class="posts__title">How to block YouTube Shorts on Chrome and keep the rest</span><time datetime="2026-11-25">25 November 2026</time></a></li>
+              <li><a href="blog/learn-every-country/"><span class="posts__title">How to learn every country in the world: a practical plan</span><time datetime="2026-11-25">25 November 2026</time></a></li>
+              <li><a href="blog/how-to-stop-doomscrolling/"><span class="posts__title">How to stop doomscrolling: what actually helps</span><time datetime="2026-11-25">25 November 2026</time></a></li>
+            </ul>
+            <p class="reading__all"><a href="guides/">All guides</a><a href="blog/">All articles</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- /build:reading -->
+
+    <section class="private">
+      <div class="wrap">
+        <h2 class="private__title" data-reveal>No account. No server. No analytics. No ads.</h2>
+        <p class="private__text" data-reveal>Your sites, settings and progress stay in your browser, and QuizBlock makes no network requests. <a href="privacy.html">Read the privacy policy</a></p>
+      </div>
+    </section>
+
+    <section class="get" id="get" data-dark>
+      <div class="get__glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="head head--center" data-reveal>
+          <h2>Chrome today. iPhone next.</h2>
+          <p>Start with the free Chrome extension. The iPhone app is in the works, with Android planned after it.</p>
+        </header>
+        <ul class="platforms">
+          <li class="platform platform--live" data-reveal>
+            <svg class="platform__art" viewBox="0 0 64 48" aria-hidden="true"><rect x="2" y="3" width="60" height="42" rx="6"/><path d="M2 14h60"/><circle cx="9" cy="8.5" r="1.4"/><circle cx="14" cy="8.5" r="1.4"/><circle cx="19" cy="8.5" r="1.4"/><rect x="26" y="6.5" width="28" height="4" rx="2"/></svg>
+            <h3>Chrome extension</h3>
+            <p>Available now, free. Also works in Edge and Brave.</p>
+            <a class="btn" data-magnetic href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=platforms&amp;utm_campaign=home"><span>Add to Chrome</span></a>
+          </li>
+          <li class="platform" data-reveal>
+            <svg class="platform__art" viewBox="0 0 64 48" aria-hidden="true"><rect x="19" y="1.5" width="26" height="45" rx="6"/><rect x="27.5" y="4.5" width="9" height="3" rx="1.5"/></svg>
+            <h3>iPhone app</h3>
+            <p>The same challenges, in front of the apps you open too often.</p>
+            <span class="status">In the works</span>
+          </li>
+          <li class="platform" data-reveal>
+            <svg class="platform__art" viewBox="0 0 64 48" aria-hidden="true"><rect x="19" y="1.5" width="26" height="45" rx="5"/><circle cx="32" cy="6" r="1.6"/></svg>
+            <h3>Android app</h3>
+            <p>Planned once the iPhone app is out.</p>
+            <span class="status">Planned</span>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <footer class="foot">
-    <div class="wrap">
-      <span>© 2026 QuizBlock</span>
-      <nav><a href="privacy.html">Privacy</a><a href="mailto:quizblockapp@gmail.com">Contact</a></nav>
+  <!-- build:footer -->
+  <footer class="foot" data-dark>
+    <div class="wrap foot__inner">
+      <a class="brand brand--foot" href="./" aria-label="QuizBlock home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10.6 11.4A5.6 5.6 0 0 1 21.6 9.8c0 2.9-2 3.9-3.6 4.7c-1.2.6-2 1.4-2 3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="5.5" y="16" width="21" height="14" rx="4" fill="#f5c242"/><circle cx="16" cy="22.2" r="2.2" fill="#10263d"/><path d="M16 23v3" stroke="#10263d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>QuizBlock</span>
+      </a>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="guides/">Guides</a>
+        <a href="blog/">Blog</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:quizblockapp@gmail.com">Contact</a>
+        <a href="https://chromewebstore.google.com/detail/oofmikofalgdplpjlmeccbejhmijgfdh?utm_source=website&amp;utm_medium=footer&amp;utm_campaign=site">Chrome Web Store</a>
+      </nav>
+      <span class="foot__copy">© 2026 QuizBlock</span>
     </div>
   </footer>
+  <!-- /build:footer -->
 </body>
 </html>
